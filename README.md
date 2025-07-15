@@ -285,8 +285,8 @@ The `child` tag can only be used within `block` tags. Its function is to place t
 
 ```
 <% block name %>
-  <% slot slot_name %>
-    content
+  <% slot slot_name %>
+    content
   <% /slot %>
 
   content...
@@ -301,11 +301,11 @@ The `slot` tag is used to define slot positions in parent templates. Child templ
 
 ```
 <% block name %>
-  <% call other_block_name %>
-    <% slot slot_name %>
-      content
+  <% call other_block_name %>
+    <% slot slot_name %>
+      content
     <% /slot %>
-  <% /call %>
+  <% /call %>
 
   content...
 <% /block %>
@@ -313,9 +313,9 @@ The `slot` tag is used to define slot positions in parent templates. Child templ
 
 ```
 <% block name %>
-  <% call other_block_name slot1="slot_content_1" slot2="slot_content_2" %>
+  <% call other_block_name slot1="slot_content_1" slot2="slot_content_2" %>
     <% slot slot3 %>
-      slot_content_3
+      slot_content_3
     <% /slot %>
   <% /call %>
 
@@ -329,7 +329,7 @@ The `slot` tag is used to define slot positions in parent templates. Child templ
 
 ```
 <% block name %>
-  <% use other_block_name slot1="slot_content_1" slot2="slot_content_2" %>
+  <% use other_block_name slot1="slot_content_1" slot2="slot_content_2" %>
 
   content...
 <% /block %>
