@@ -1,7 +1,7 @@
 {
   "name": "cb-template",
   "version": "3.0.1",
-  "description": "Changba Template Engine",
+  "description": "A Node.js server-side template engine that supports multi-level template inheritance.",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
@@ -23,12 +23,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChangbaFE/cbT.git"
+    "url": "git+https://github.com/hex-ci/cbT.git"
   },
   "keywords": [
     "template",
     "template-engine",
-    "changba",
     "cbT",
     "server-side-template",
     "template-inheritance",
@@ -38,9 +37,9 @@
   "author": "Hex",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChangbaFE/cbT/issues"
+    "url": "https://github.com/hex-ci/cbT/issues"
   },
-  "homepage": "https://github.com/ChangbaFE/cbT#readme",
+  "homepage": "https://github.com/hex-ci/cbT#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.28.0",
     "babel-jest": "^30.0.4",

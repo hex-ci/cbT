@@ -192,7 +192,7 @@ Parameters:
 * data: Object, data for rendering. Object keys are automatically converted to variable names in the template
 * options: Object, compilation parameters.
   * cache: Boolean, whether to enable compilation cache, default is enabled
-  * cacheName: String, set cache name, default value `changba-template-cache`. This value is invalid if `cbT.cachePath` is set
+  * cacheName: String, set cache name, default value `cb-template-cache`. This value is invalid if `cbT.cachePath` is set
 * callback: Function, callback function executed after compilation.
   * Callback function parameters: err: whether there is an error; content: rendered result
 

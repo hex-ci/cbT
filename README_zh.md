@@ -192,7 +192,7 @@ cbT.render(`<title><%=title%></title><p><%=nickname%></p>`, { title: '标题', n
 * data: 对象，用于渲染的数据，对象的 key 会自动转换为模板中的变量名
 * options: 对象，编译参数。
   * cache: 布尔，是否开启编译缓存，默认开启
-  * cacheName: 字符串，设置缓存名称，默认值 `changba-template-cache`，如果设置过 `cbT.cachePath` 则此值无效
+  * cacheName: 字符串，设置缓存名称，默认值 `cb-template-cache`，如果设置过 `cbT.cachePath` 则此值无效
 * callback: 函数，回调函数，编译完成后回调。
   * 回调函数参数: err: 是否有错误；content: 渲染后的结果
 

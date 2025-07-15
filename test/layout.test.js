@@ -466,11 +466,11 @@ describe('layout.js', () => {
         expect(err1).toBeNull();
 
         // Now manually create a cache file with wrong version
-        const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'changba-template-cache', require('../lib/utils').getHash(layout.core.basePath));
+        const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'cb-template-cache', require('../lib/utils').getHash(layout.core.basePath));
         const cacheFile = path.join(cacheDir, require('../lib/utils').getHash('version.html') + '.html');
 
         // Create cache with wrong version
-        const wrongCacheContent = `'/* changba template engine
+        const wrongCacheContent = `'/* cb template engine
 {"version":"wrong-version","files":{}}
 */+'test content`;
 
@@ -496,12 +496,12 @@ describe('layout.js', () => {
       fs.writeFileSync(path.join(testDir, 'corrupt.html'), content);
 
       // Create corrupted cache file
-      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'changba-template-cache', require('../lib/utils').getHash(layout.core.basePath));
+      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'cb-template-cache', require('../lib/utils').getHash(layout.core.basePath));
       const cacheFile = path.join(cacheDir, require('../lib/utils').getHash('corrupt.html') + '.html');
 
       require('../lib/utils').mkdirp(cacheDir, () => {
         // Write corrupted JSON
-        const corruptCache = `'/* changba template engine
+        const corruptCache = `'/* cb template engine
 {invalid json}
 */+'test content`;
 
@@ -524,7 +524,7 @@ describe('layout.js', () => {
       fs.writeFileSync(path.join(testDir, 'readerror.html'), content);
 
       // Create a cache file we can't read
-      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'changba-template-cache', require('../lib/utils').getHash(layout.core.basePath));
+      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'cb-template-cache', require('../lib/utils').getHash(layout.core.basePath));
       const cacheFile = path.join(cacheDir, require('../lib/utils').getHash('readerror.html') + '.html');
 
       require('../lib/utils').mkdirp(cacheDir, () => {
@@ -1373,10 +1373,10 @@ describe('layout.js', () => {
       fs.writeFileSync(path.join(testDir, 'cache-no-files.html'), content);
 
       // Create a cache file with no files property
-      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'changba-template-cache', require('../lib/utils').getHash(layout.core.basePath));
+      const cacheDir = layout.core.cachePath || path.join(os.tmpdir(), 'cb-template-cache', require('../lib/utils').getHash(layout.core.basePath));
       const cacheFile = path.join(cacheDir, require('../lib/utils').getHash('cache-no-files.html') + '.html');
 
-      const cacheContent = `'/* changba template engine
+      const cacheContent = `'/* cb template engine
 {"version":"${layout.core.version}"}
 */+'test content`;
 
